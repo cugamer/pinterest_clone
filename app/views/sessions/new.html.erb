@@ -1,2 +1,16 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide(:title, formatted_title("Sign in")) %>
+
+<h1>Sign in</h1>
+
+<div class="wide-form">
+  <%= form_for(:session, url: login_path) do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+  <% end %>
+  
+</div>
+
