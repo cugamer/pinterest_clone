@@ -7,6 +7,9 @@ class PinsController < ApplicationController
   def create
     @user = current_user
     @pin = @user.pins.new(pins_params)
+    # p pins_params[:title]
+    # p "=============================================="
+    # @pin = pins_params[:pin_image]
     if @pin.save
       flash[:success] = "Sucessfully pinned!"
       redirect_to @pin
@@ -28,7 +31,7 @@ class PinsController < ApplicationController
   
   private
     def pins_params
-      params.require(:pin).permit(:title, :description)
+      params.require(:pin).permit(:title, :description, :pin_image)
     end
     
     def logged_in_user
