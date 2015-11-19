@@ -4,8 +4,13 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <%= link_to "Help", help_url %>
-        <%= link_to "Log in", sessions_new_path %>
-        <%= link_to "Sign up", new_user_path %>
+        <% if logged_in? %>
+          <%= link_to "Sign out", logout_path, method: :delete,
+                      data: { confirm: "Are you sure you want to log out? " }%>
+        <% else %>
+          <%= link_to "Sign up", new_user_path %>
+          <%= link_to "Log in", sessions_new_path %>
+        <% end %>
       </ul>
     </nav>
   </div>
