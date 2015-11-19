@@ -5,4 +5,6 @@ class Pin < ActiveRecord::Base
   validates :rating, presence: true
   
   default_value_for :rating, 0
+  
+  belongs_to :user
 end

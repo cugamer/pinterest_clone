@@ -1,2 +1,24 @@
-<h1>Pins#new</h1>
-<p>Find me in app/views/pins/new.html.erb</p>
+<% provide(:title, "Add new pin") %>
+
+<h1>Create a new pin</h1>
+
+<% if @pin.errors.any? %>
+  <ul>
+    <% @pin.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+  
+<% end %>
+
+<div class="wide-form">
+  <%= form_for @pin do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+    
+    <%= f.submit "Create pin" %>
+  <% end %>
+</div>
