@@ -1,1 +1,6 @@
 <% provide(:title, formatted_title(@pin.title.truncate(25))) %>
+
+<h2><%= @pin.title %></h2>
+
+<p><%= simple_format(@pin.description) %></p>
+<p><%= @user.email  %></p>
