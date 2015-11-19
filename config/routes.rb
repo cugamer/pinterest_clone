@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   
+  get 'pins/new'
+
+  get 'pins/edit'
+
   get 'sessions/new'
 
   root                         'static_pages#home'
@@ -8,6 +12,7 @@ Rails.application.routes.draw do
   post 'login'              => 'sessions#create'
   delete 'logout'           => 'sessions#destroy'
   
+  resources 'pins'
   resources 'users'
   
   # The priority is based upon order of creation: first created -> highest priority.
