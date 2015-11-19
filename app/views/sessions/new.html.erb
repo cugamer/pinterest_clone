@@ -9,8 +9,10 @@
     
     <%= f.label :password %>
     <%= f.password_field :password %>
+    
+    <%= f.submit "Log in" %>
 
   <% end %>
-  
 </div>
 
+<p class="sign-in-up-link">New here? <%= link_to "Sign up here", new_user_path %></p>
