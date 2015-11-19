@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
                     format: { with: VALID_EMAIL },
                     uniqueness: { case_sensitive: false }
   
-  validates :password, presence: true, length: { minimum: 6 }                    
+  validates :password, presence: true, length: { minimum: 6 }
+  
+  before_save { self.email = email.downcase }
+  
   has_secure_password
 end
