@@ -32,6 +32,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Allow setting of default values in model
 gem 'default_value_for', '~> 3.0.0'
 
+# Handle file uploads
+gem 'carrierwave', '~> 0.10.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
