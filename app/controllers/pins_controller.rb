@@ -7,7 +7,8 @@ class PinsController < ApplicationController
     @user = current_user
     @pin = @user.pins.new(pins_params)
     if @pin.save
-      
+      flash[:success] = "Sucessfully pinned!"
+      redirect_to @pin
     else
       render 'new'
     end
@@ -17,6 +18,7 @@ class PinsController < ApplicationController
   end
   
   def show
+    @pin = Pin.find(params[:id])
   end
   
   private
