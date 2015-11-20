@@ -25,7 +25,7 @@ class PinsController < ApplicationController
   
   def show_user
     @user = User.find(params[:user_id])
-    @pins = @user.pins
+    @pins = @user.pins.last(20)
   end
   
   def destroy
