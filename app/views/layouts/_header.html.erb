@@ -3,14 +3,16 @@
     <%= link_to "Pinterest Clone", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Help", help_url %></li>
         <% if logged_in? %>
+          <li><%= link_to "My pins", user_pins_page_path(current_user.id) %></li>
           <li><%= link_to "New pin", new_pin_path %></li>
+          <li><%= link_to "My Account", user_path(current_user.id) %></li>
           <li><%= link_to "Sign out", logout_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign up", new_user_path %></li>
           <li><%= link_to "Log in", sessions_new_path %></li>
         <% end %>
+        <li><%= link_to "Help", help_url %></li>
       </ul>
     </nav>
   </div>
