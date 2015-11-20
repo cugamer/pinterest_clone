@@ -7,6 +7,10 @@
     <p><%= simple_format(@pin.description) %></p>
   </div>
   <div class="pin-footer">
-    <p>Submitted by <%= @user.email  %></p>
+
+    <div id="pin-submitted-by">Submitted by <%= @user.email  %></div>
+    <div><%= link_to "Edit pin", edit_pin_path(@pin.id), class: "btn btn-primary" %></div>
+
+    
   </div>
 </div>

@@ -27,14 +27,15 @@
 .pin-footer{
   background-color: #DDD;
   border-top: 1px solid #000;
-  padding-left: 20px;
-  p{
-    margin-bottom: 0;
-    padding: 10px 0;
+  height: 40px;
+
+    display: flex;
+    justify-content: space-between;
+  div{
+    vertical-align: middle;
   }
+  
 }
-
-
 
 .pin-display-multi{
   @include gen-display;
@@ -52,3 +53,13 @@
 .box img{
   width: 100%;
 }
+
+#pin-submitted-by{
+  padding: 10px;
+}
+.btn-primary{
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+
