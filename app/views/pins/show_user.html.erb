@@ -3,13 +3,15 @@
 <% if !@pins.empty? %>
   <div id="pins" class="transitions-enabled">
     <% @pins.each do |pin| %>
-      <div class="pin-display-multi box">
-        <img src="<%= pin.pin_image %>" class="pinned-pic-small">
-        <div class="pin-text-small">
-          <h2><%= pin.title %></h2>
-          <p><%= simple_format(pin.description).truncate(200) %></p>
+      <%= link_to pin_path(pin.id) do %>
+        <div class="pin-display-multi box">
+          <img src="<%= pin.pin_image %>" class="pinned-pic-small">
+          <div class="pin-text-small">
+            <h2><%= pin.title %></h2>
+            <p><%= simple_format(pin.description).truncate(200) %></p>
+          </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
   
