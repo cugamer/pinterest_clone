@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   post 'login'              => 'sessions#create'
   delete 'logout'           => 'sessions#destroy'
   
+  get 'vote_up'             => 'votes#vote_up'
+  
   resources 'pins'
   resources 'users'
   get 'user_pins/:user_id'  => 'pins#show_user', as: 'user_pins_page'
