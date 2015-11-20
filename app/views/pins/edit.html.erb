@@ -2,25 +2,4 @@
 
 <h1>Edit pin</h1>
 
-<% if @pin.errors.any? %>
-  <ul>
-    <% @pin.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-  </ul>
-<% end %>
-
-<div class="wide-form">
-  <%= form_for @pin do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-    
-    <%= f.label "Select image" %>
-    <%= f.file_field :pin_image %>
-    
-    <%= f.submit "Create pin" %>
-  <% end %>
-</div>
+<%= render 'pin_form' %>
