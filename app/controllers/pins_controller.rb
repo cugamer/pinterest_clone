@@ -23,6 +23,11 @@ class PinsController < ApplicationController
     @user = User.find(@pin.user_id)
   end
   
+  def show_user
+    @user = User.find(params[:user_id])
+    @pins = @user.pins
+  end
+  
   def destroy
   end
   

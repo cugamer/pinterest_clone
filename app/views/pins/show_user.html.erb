@@ -1,0 +1,15 @@
+<%= provide(:title, formatted_title("#{@user.email}s pins")) %>
+
+<% if !@pins.empty? %>
+  <% @pins.each do |pin| %>
+    <div class="pin-display">
+      <img src="<%= pin.pin_image %>" class="pinned-pic">
+      <div class="pin-text">
+        <h2><%= pin.title %></h2>
+        <p><%= simple_format(pin.description) %></p>
+      </div>
+    </div>
+  
+  <% end %>
+
+<% end %>
