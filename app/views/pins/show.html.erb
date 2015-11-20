@@ -10,12 +10,12 @@
     <ul>
       <li id="pin-submitted-by">Submitted by <%= @user.email  %></li>
       <% if logged_in? %>
+        <li class="btn btn-default"><%= link_to "vote-up", vote_up_path  %></li>
         <% if current_user == @user %>
-          <li><%= link_to "Delete pin", pin_path(@pin.id), 
+          <li class="btn btn-danger"><%= link_to "Delete pin", pin_path(@pin.id), 
                                         method: :delete,
-                                        data: { confirm: "Are you sure?" },
-                                        class: "btn btn-danger" %></li>
-          <li><%= link_to "Edit pin", edit_pin_path(@pin.id), class: "btn btn-primary" %></li>
+                                        data: { confirm: "Are you sure?" } %></li>
+          <li class="btn btn-primary" ><%= link_to "Edit pin", edit_pin_path(@pin.id) %></li>
         <% end %>
       <% end %>
     </ul>   
