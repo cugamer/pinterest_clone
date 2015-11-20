@@ -34,13 +34,21 @@
   }
 }
 
-.multi-pins-container{
-  horizontal-align: middle;
-}
+
 
 .pin-display-multi{
-  float: left;
-  width: 250px;
   @include gen-display;
-  margin: 20px;
+}
+
+#pins{
+  margin: 0 auto;
+}
+
+.box{
+  margin: 5px;
+  width: 214px;
+}
+
+.box img{
+  width: 100%;
 }
