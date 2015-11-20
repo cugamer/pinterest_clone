@@ -1,11 +1,15 @@
-.pin-display{
+@mixin gen-display{
   border: 1px solid #000;
-  width: 60%;
-  margin: auto;
   background: #fff;
 }
 
-.pinned-pic{
+.pin-display{
+  width: 60%;
+  margin: auto;
+  @include gen-display;
+}
+
+.pinned-pic, .pinned-pic-small{
   object-fit: fill;
   width: 100%;
   border-bottom: 1px solid #000;
@@ -28,4 +32,15 @@
     margin-bottom: 0;
     padding: 10px 0;
   }
+}
+
+.multi-pins-container{
+  horizontal-align: middle;
+}
+
+.pin-display-multi{
+  float: left;
+  width: 250px;
+  @include gen-display;
+  margin: 20px;
 }
