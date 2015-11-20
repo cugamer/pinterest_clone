@@ -22,6 +22,9 @@ class PinsController < ApplicationController
   end
   
   def update
+    @pin = Pin.find(params[:id])
+    @pin.update_attributes(pins_params)
+    redirect_to @pin
   end
   
   def show
