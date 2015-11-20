@@ -1,8 +1,12 @@
 <% provide(:title, formatted_title(@pin.title.truncate(25))) %>
 
-
-<img src="<%= @pin.pin_image %>">
-<h2><%= @pin.title %></h2>
-
-<p><%= simple_format(@pin.description) %></p>
-<p><%= @user.email  %></p>
+<div class="pin-display">
+  <img src="<%= @pin.pin_image %>" class="pinned-pic">
+  <div class="pin-text">
+    <h2><%= @pin.title %></h2>
+    <p><%= simple_format(@pin.description) %></p>
+  </div>
+  <div class="pin-footer">
+    <p>Submitted by <%= @user.email  %></p>
+  </div>
+</div>
