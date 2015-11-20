@@ -10,7 +10,12 @@
     <ul>
       <li id="pin-submitted-by">Submitted by <%= @user.email  %></li>
       <% if logged_in? %>
-        <li class="btn btn-default"><%= link_to "vote-up", vote_up_path  %></li>
+        <li class="btn btn-default">
+          <%= link_to vote_up_path do  %>
+            <%= image_tag "thumbs-up-icon", class: "thumbs-button" %>
+            <%= @pin.rating %>
+          <% end %>
+        </li>
         <% if current_user == @user %>
           <li class="btn btn-danger"><%= link_to "Delete pin", pin_path(@pin.id), 
                                         method: :delete,

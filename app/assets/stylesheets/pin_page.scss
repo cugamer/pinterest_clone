@@ -51,6 +51,11 @@
   margin: 10px;
 }
 
+.thumbs-button{
+  height: 16px;
+  width: 16px;
+}
+
 .pin-display-multi{
   @include gen-display;
 }
