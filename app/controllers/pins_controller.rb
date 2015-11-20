@@ -38,6 +38,9 @@ class PinsController < ApplicationController
   end
   
   def destroy
+    pin = Pin.find(params[:id])
+    pin.destroy
+    redirect_to user_pins_page_path(current_user.id)
   end
   
   private
