@@ -9,13 +9,13 @@
   <div class="pin-footer">
     <ul>
       <li id="pin-submitted-by">Submitted by <%= @user.email  %></li>
-      <li><%= link_to "Delete pin", pin_path(@pin.id), 
-                                    method: :delete,
-                                    data: { confirm: "Are you sure?" },
-                                    class: "btn btn-danger" %></li>
-      <li><%= link_to "Edit pin", edit_pin_path(@pin.id), class: "btn btn-primary" %></li>
-      
+      <% if logged_in? && current_user == @user %>
+        <li><%= link_to "Delete pin", pin_path(@pin.id), 
+                                      method: :delete,
+                                      data: { confirm: "Are you sure?" },
+                                      class: "btn btn-danger" %></li>
+        <li><%= link_to "Edit pin", edit_pin_path(@pin.id), class: "btn btn-primary" %></li>
+      <% end %>
     </ul>   
-    
   </div>
 </div>
