@@ -11,5 +11,6 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   
   has_many :pins
+  has_many :votes
   has_secure_password
 end

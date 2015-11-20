@@ -7,6 +7,7 @@ class Pin < ActiveRecord::Base
   default_value_for :rating, 0
   
   belongs_to :user
+  has_many :votes
   
   mount_uploader :pin_image, PinImageUploader
 end
