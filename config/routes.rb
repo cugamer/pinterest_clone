@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   
   resources 'pins'
   resources 'users'
-  get 'user_pins/:user_id'  => 'pins#show_user'
+  get 'user_pins/:user_id'  => 'pins#show_user', as: 'user_pins_page'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
