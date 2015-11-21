@@ -28,8 +28,13 @@ class PinsController < ApplicationController
   end
   
   def show
-    @pin = Pin.find(params[:id])
-    @user = User.find(@pin.user_id)
+    if Pin.exists?(params[:id])
+      @pin = Pin.find(params[:id])
+      @user = User.find(@pin.user_id)
+    else
+      redirect_to no_pin_path
+    end
+      
   end
   
   def show_user
