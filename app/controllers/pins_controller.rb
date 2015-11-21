@@ -32,8 +32,6 @@ class PinsController < ApplicationController
       @pin = Pin.find(params[:id])
       @user = User.find(@pin.user_id)
       @comments = Comment.where(pin_id: @pin.id)
-      p "======================================="
-      p @comments
     else
       redirect_to no_pin_path
     end
