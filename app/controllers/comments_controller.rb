@@ -3,12 +3,8 @@ class CommentsController < ApplicationController
     @pin = Pin.find(comment_params[:pin_id])
     @user = current_user
     @comment = @user.comments.new(comment_params)
-    if @comment.save
-      
-    else
-      
-    end
-    redirect_to @pin
+    @comment.save
+    render 'pins/show'
   end
   
   private
