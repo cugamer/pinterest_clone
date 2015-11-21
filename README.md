@@ -1,11 +1,11 @@
-Recipe Box project
-==================
+Pinterest Clone project
+=======================
 
 Yet another Rails exercise, this time a basic Pinterest clone.  Users
 can create and edit an account, log in and out, create and edit pins (with a 
-picture,) delete pins and vote pins up.  There is no function for following other
-users, that's outside the projects current scope.  Built over a two day period 
-from 11-19 to 11-20 2015.
+picture,) delete pins, vote pins up and submit comments.  There is no function 
+for following other users, that's outside the projects current scope.  Built 
+over a two day period from 11-19 to 11-20 2015.
 
 To get this up and running
 --------------------------
@@ -40,3 +40,4 @@ Still to do
 -----------
 * Implement persistent user sessions
 * Add automated testing
+* Expand commenting options to include editing and deletion
