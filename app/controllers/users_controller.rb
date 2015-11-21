@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:show, :edit, :update]
-  before_action :correct_user, only: [:show, :edit, :update]
+  before_action :logged_in_user, only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
   
   def new
     @user = User.new
@@ -33,6 +33,14 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+  end
+  
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
+    flash[:danger] = "Your account and all it's associated pins have been removed."
+    logout
+    redirect_to root_path
   end
   
   private
