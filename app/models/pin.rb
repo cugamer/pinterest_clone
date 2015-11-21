@@ -3,6 +3,7 @@ class Pin < ActiveRecord::Base
   validates :description, presence: true
   validates :user_id, presence: true
   validates :rating, presence: true
+  validates :pin_image, presence: { :message => "must be selected" }
   
   default_value_for :rating, 0
   
