@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post 'login'              => 'sessions#create'
   delete 'logout'           => 'sessions#destroy'
   
-  get 'vote_up/:id'         => 'votes#vote_up', as: 'vote_up'
+  get 'change_rating/:id'   => 'votes#change_rating', as: 'change_rating'
   
   resources 'pins'
   resources 'users'
