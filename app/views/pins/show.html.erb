@@ -9,10 +9,10 @@
   <div class="pin-footer">
     <ul>
       <li id="pin-submitted-by">Submitted by <%= @user.email  %></li>
-      <% if logged_in? %>
+      <% logged_in? ? enabled = "" : enabled = "faded-thumb"  %>
         <li class="btn btn-default">
           <%= link_to change_rating_path(@pin.id) do  %>
-            <%= image_tag "thumbs-up-icon", class: "thumbs-button" %>
+            <%= image_tag "thumbs-up-icon", class: "thumbs-button #{enabled}" %>
             <%= @pin.rating %>
           <% end %>
         </li>
@@ -22,7 +22,6 @@
                                         data: { confirm: "Are you sure?" } %></li>
           <li class="btn btn-primary" ><%= link_to "Edit pin", edit_pin_path(@pin.id) %></li>
         <% end %>
-      <% end %>
     </ul>   
   </div>
 </div>

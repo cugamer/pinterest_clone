@@ -56,6 +56,10 @@
   width: 16px;
 }
 
+.faded-thumb{
+  opacity: .25;
+}
+
 .pin-display-multi{
   @include gen-display;
 }
