@@ -24,4 +24,25 @@
         <% end %>
     </ul>   
   </div>
+  <div class="comments-footer wide-form">
+    <% if logged_in? %>
+      <h5>Submit a comment</h5>
+      <% if @comment && @comment.errors.any? %>
+        <ul>
+          <% @comment.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      <% end %>
+      
+      <%= form_for :comments, url: add_comment_path do |f| %>
+        <%= f.hidden_field :pin_id, value: @pin.id %>
+        <%= f.text_area :comment_text %>
+        
+        <%= f.submit "Post comment" %>
+      <% end %>
+    
+    <% end %>
+    
+  </div>
 </div>
