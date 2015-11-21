@@ -8,6 +8,7 @@ class Pin < ActiveRecord::Base
   
   belongs_to :user
   has_many :votes
+  has_many :comments
   
   mount_uploader :pin_image, PinImageUploader
 end
