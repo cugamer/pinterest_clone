@@ -39,13 +39,6 @@ gem 'carrierwave', '~> 0.10.0'
 # Allow advanced element positioning
 gem 'masonry-rails', '~> 0.2.0'
 
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -53,8 +46,10 @@ group :development, :test do
   # User RSpec for testing
   gem 'rspec-rails', '~> 3.0'
   
-  # Use matchers for testing AR associations and validations
-  gem 'shoulda-matchers', '~> 3.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', require: false
 end
 
 group :development do
