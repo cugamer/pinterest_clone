@@ -52,6 +52,9 @@ group :development, :test do
   
   # User RSpec for testing
   gem 'rspec-rails', '~> 3.0'
+  
+  # Use matchers for testing AR associations and validations
+  gem 'shoulda-matchers', '~> 3.0'
 end
 
 group :development do
