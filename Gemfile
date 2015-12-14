@@ -46,6 +46,9 @@ group :development, :test do
   # User RSpec for testing
   gem 'rspec-rails', '~> 3.0'
   
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'capybara', '~> 2.5.0'
+  gem 'database_cleaner', '~> 1.5.1'
 end
 
 group :test do
