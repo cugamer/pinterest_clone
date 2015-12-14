@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   describe 'validations' do
-    
     describe 'for name' do
       it { should validate_presence_of(:name) }
       
@@ -33,8 +32,8 @@ RSpec.describe User, type: :model do
       end
       
       it do 
-        pending("Not sure how to work this")
-        should validate_uniqueness_of(:email).on(:create) 
+        # pending("Not sure how to work this")
+        should validate_uniqueness_of(:email).case_insensitive  
       end
     end
     
