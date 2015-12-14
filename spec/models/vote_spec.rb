@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Vote, type: :model do
+  describe 'creation' do
+    it 'is successful when provided valid inputs' do
+      expect(build(:vote)).to be_valid
+    end
+  end
+  
   describe 'associations' do
     it { should belong_to(:user) }
     it { should belong_to(:pin) }

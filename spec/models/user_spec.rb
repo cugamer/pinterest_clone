@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   describe 'validations' do
     describe 'for name' do
       it { should validate_presence_of(:name) }
@@ -43,6 +42,10 @@ RSpec.describe User, type: :model do
   end
   
   describe 'on account creation' do
+    it 'is created when given correct inputs' do
+      expect(build(:user)).to be_valid
+    end
+    
     describe 'password' do
       it { should have_secure_password }
     end

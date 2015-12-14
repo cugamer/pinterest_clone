@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Pin, type: :model do
+  describe 'creation' do
+    it 'is successful when provided valid inputs' do
+      expect(build(:pin)).to be_valid
+    end
+  end
+  
   describe 'validations' do
     describe 'for title' do
       it { should validate_presence_of(:title) }
