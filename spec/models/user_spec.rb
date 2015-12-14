@@ -32,14 +32,15 @@ RSpec.describe User, type: :model do
           .for(:email)
       end
       
-      it { pending("Not sure how to work this")
-        should validate_uniqueness_of(:email).on(:create) }
+      it do 
+        pending("Not sure how to work this")
+        should validate_uniqueness_of(:email).on(:create) 
+      end
     end
     
     describe 'for password' do
       it { should validate_length_of(:password).is_at_least(6) }
     end
-    
   end
   
   describe 'on account creation' do
@@ -59,8 +60,12 @@ RSpec.describe User, type: :model do
         user.destroy # Really not sure why this is necessary, but the new account
                      # is sticking around for some reason if not included.
       end
-      
     end
   end
-
+  
+  describe 'associations' do
+    it { should have_many(:pins).dependent(:destroy) }
+    it { should have_many(:votes) }
+    it { should have_many(:comments).dependent(:destroy) }
+  end
 end
