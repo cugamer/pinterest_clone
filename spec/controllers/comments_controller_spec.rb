@@ -3,11 +3,12 @@ require 'sessions_helper'
 
 RSpec.describe CommentsController, type: :controller do
   it 'creates a new comment when given valid input' do
-    #  Should stub the pin and user here
     pin = build(:pin)
     pin.save
+    
     params = {:comment => {:pin_id => pin.id,
                             :comment_text => "comment"}}
+                            
     user = build(:user)
     user.save
     
