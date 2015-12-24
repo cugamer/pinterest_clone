@@ -3,18 +3,18 @@ include SessionsHelper
 
 RSpec.describe PinsController, type: :controller do
   before(:all) do
-    user1 = build(:user)
-    user2 = build(:user_two)
-    user1.save
-    user2.save
+    @user1 = build(:user)
+    @user2 = build(:user_two)
+    @user1.save
+    @user2.save
     3.times do
       pin_params = FactoryGirl.attributes_for(:pin)
-      pin = user1.pins.create(pin_params)
+      pin = @user1.pins.create(pin_params)
     end
   end
   
-  let(:user1) { User.find(1) }
-  let(:user2) { User.find(2) }
+  let(:user1) { @user1 }
+  let(:user2) { @user2 }
 
   let(:updated_title) { "Updated title" }
   let(:updated_desc) { "Updated description" }

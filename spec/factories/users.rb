@@ -26,8 +26,13 @@ FactoryGirl.define do
     email                 'none4@none.com'
   end
   
+  factory :comments_user, :parent => :user do
+    name                  'Guy Icognito'
+    email                 'none5@none.com'
+  end
+  
   factory :no_account_user, :parent => :user do
     name                  'Jason Bourne'
-    email                 'none5@none.com'
+    email                 'none6@none.com'
   end
 end
