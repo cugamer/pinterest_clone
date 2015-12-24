@@ -10,4 +10,14 @@ FactoryGirl.define do
     name                  'Jane Smith'
     email                 'none1@none.com'
   end
+  
+  factory :sessions_user, :parent => :user do
+    name                  'Red Green'
+    email                 'none2@none.com'
+  end
+  
+  factory :users_mod_user, :parent => :user do
+    name                  'Han Solo'
+    email                 'none3@none.com'
+  end
 end

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe SessionsHelper, type: :helper do
-  let(:user) { build(:user) }
+  let(:user) { build(:sessions_user) }
   
   describe 'log_in method' do
     it "creates a user_id value in the session object" do

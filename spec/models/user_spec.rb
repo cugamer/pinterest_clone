@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
       it { should validate_length_of(:email).is_at_most(255) }
       
       it do
-        should allow_values('none@none.com',
+        should allow_values('none99999@none.com',
                             '1111@22222.3333',
                             '1a1a1a@2b2b2b2.3c3c3c')
           .for(:email)
@@ -43,7 +43,7 @@ RSpec.describe User, type: :model do
   
   describe 'on account creation' do
     it 'is created when given correct inputs' do
-      expect(build(:user)).to be_valid
+      expect(build(:users_mod_user)).to be_valid
     end
     
     describe 'password' do
