@@ -15,12 +15,7 @@ RSpec.describe PinsController, type: :controller do
   
   let(:user1) { User.find(1) }
   let(:user2) { User.find(2) }
-  
-  after(:all) do
-    user1.destroy
-    user2.destroy
-  end
-  
+
   let(:updated_title) { "Updated title" }
   let(:updated_desc) { "Updated description" }
   let(:updated_pic) { "kitty_update.jpg" }
