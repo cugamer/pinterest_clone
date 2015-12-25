@@ -15,7 +15,7 @@ RSpec.describe CommentsController, type: :controller do
     let(:user) { @user }
     let(:pin) { @pin }
   
-    it 'creates a new comment when given valid input' do
+    it 'creates a new comment and redirects to the pin page when given valid input' do
       params = {:comment => {:pin_id => pin.id,
                               :comment_text => "comment"}}
       

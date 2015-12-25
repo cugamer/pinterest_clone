@@ -35,4 +35,36 @@ FactoryGirl.define do
     name                  'Jason Bourne'
     email                 'none6@none.com'
   end
+  
+  factory :users_cont_user, :parent => :user do
+    name                  'Martin VanNostren'
+    email                 'none7@none.com'
+  end
+  
+  factory :users_cont_user_two, :parent => :user do
+    name                  'William Riker'
+    email                 'none8@none.com'
+  end
+  
+  factory :users_cont_user_three, :parent => :user do
+    name                  'Hawkeye Pierce'
+    email                 'none9@none.com'
+  end
+  
+  factory :users_cont_user_edit, :parent => :user do
+    name                  'Wesley Crusher'
+    email                 'none8edited@none.com'
+  end
+  
+  factory :users_cont_user_edit_invalid, :parent => :user do
+    name                  ''
+    email                 'none.com'
+  end
+  
+  factory :invalid_user, :parent => :user do
+    name                  ''
+    email                 'none@'
+    password              'password'
+    password_confirmation 'password_no_match'
+  end
 end
