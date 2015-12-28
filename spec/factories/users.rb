@@ -56,6 +56,11 @@ FactoryGirl.define do
     email                 'none8edited@none.com'
   end
   
+  factory :votes_user, :parent => :user do
+    name                  'Harry S Plinket'
+    email                 'none9@none.com'
+  end
+  
   factory :users_cont_user_edit_invalid, :parent => :user do
     name                  ''
     email                 'none.com'

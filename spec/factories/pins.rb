@@ -14,4 +14,10 @@ FactoryGirl.define do
     description             "Updated description"
     pin_image               Rack::Test::UploadedFile.new(Rails.root.join("spec/features/kitty_update.jpg"))
   end
+  
+  factory :vote_pin, :parent => :pin do
+    title                   "Vote pin title"
+    description             "Vote pin description"
+    pin_image               Rack::Test::UploadedFile.new(Rails.root.join("spec/features/kitty.jpg"))
+  end
 end
