@@ -43,5 +43,4 @@ Components used
 Still to do
 -----------
 * Implement persistent user sessions
-* Add automated testing
 * Expand commenting options to include editing and deletion
