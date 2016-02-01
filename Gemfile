@@ -38,6 +38,9 @@ gem 'carrierwave', '~> 0.10.0'
 # Allow advanced element positioning
 gem 'masonry-rails', '~> 0.2.0'
 
+# AWS gem to allow file uploading
+gem 'aws-sdk', '~>2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
