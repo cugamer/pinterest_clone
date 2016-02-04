@@ -33,7 +33,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'default_value_for', '~> 3.0.0'
 
 # Handle file uploads
-# gem 'carrierwave', '~> 0.10.0'
+gem 'carrierwave', '~> 0.10.0'
 gem 'carrierwave-aws', '~> 1.0.0'
 
 # Allow advanced element positioning
