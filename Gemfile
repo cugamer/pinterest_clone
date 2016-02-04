@@ -41,7 +41,11 @@ gem 'masonry-rails', '~> 0.2.0'
 # AWS gem to allow file uploading
 gem 'aws-sdk', '~> 2'
 
-gem 'figaro'
+# Aids with configuring app for deployment
+gem 'figaro', '~> 1.1.1'
+
+# Provides cloud service functions
+gem 'fog', '~> 1.37.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
