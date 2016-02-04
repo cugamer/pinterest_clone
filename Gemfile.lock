@@ -335,8 +335,8 @@ DEPENDENCIES
   database_cleaner (~> 1.5.1)
   default_value_for (~> 3.0.0)
   factory_girl_rails (~> 4.5.0)
-  figaro (= 1.1.1)
-  fog
+  figaro (~> 1.1.1)
+  fog (~> 1.37.0)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

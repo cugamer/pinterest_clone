@@ -7,8 +7,8 @@ class PinImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
-  # storage :fog
+  # storage :file
+  storage :fog
   
   def extension_white_list
     %w(jpg jpeg gif png)
