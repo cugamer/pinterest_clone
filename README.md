@@ -37,7 +37,7 @@ Components used
 * BCrypt
 * Sass CSS
 * Bootstrap
-* Carrierwave
+* CarrierWave
 * Masonry
 * RSpec
 * FactoryGirl
