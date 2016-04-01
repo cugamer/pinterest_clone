@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       if check_for_protected(@user.email)
-        flash[:danger] = "this account cannot be edited"
+        flash[:danger] = "This account cannot be edited"
       end
       render 'edit'
     end
